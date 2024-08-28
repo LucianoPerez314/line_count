@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"log"
 	"os"
+
+	"github.com/LuckyLuciano314/line_count/lines"
 )
 
 func main() {
@@ -20,6 +22,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	lines.CountLines(fileptr)
 
 	fileptr.Close()
 }

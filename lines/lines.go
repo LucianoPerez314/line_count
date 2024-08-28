@@ -3,10 +3,11 @@ package lines
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 )
 
-func CountLines(fileptr *File) {
+func CountLines(fileptr io.Reader) {
 	//Read from file
 	//Iniialize scanner for file and make it scan line by line.
 	scanner := bufio.NewScanner(fileptr)
